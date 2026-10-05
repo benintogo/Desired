@@ -32,6 +32,8 @@ Boundaries: https://github.com/datasets/geo-countries, derived from the public-d
 
 Validated all 970,225 matrix cells and all 197 geographic matches. Browser checks cover row direction, No Data cases, timeline ending at 2023, selectors, and a 390px mobile viewport without horizontal overflow. The optional browser map tool was tested with valid and invalid year inputs. No browser console errors were observed.
 
-Colors: Target = green; Trailer = red; Peer = yellow; Self = dark navy; No Data = black.
+Colors: Target = green; Trailer = red; Peer = yellow; Self = gray; No Data = black.
 
 Greenland uses Denmark’s classification in every year, including Self when Denmark is selected. It does not add an extra country to the classification counts.
+
+Somaliland follows Somalia and Baykonur Cosmodrome follows Kazakhstan in all years, including Self. These regions do not add to country counts.
