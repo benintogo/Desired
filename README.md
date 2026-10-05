@@ -37,3 +37,5 @@ Colors: Target = green; Trailer = red; Peer = yellow; Self = gray; No Data = bla
 Greenland uses Denmark’s classification in every year, including Self when Denmark is selected. It does not add an extra country to the classification counts.
 
 Somaliland follows Somalia and Baykonur Cosmodrome follows Kazakhstan in all years, including Self. These regions do not add to country counts.
+
+Map geometry merges Greenland into Denmark, New Caledonia into France, and Puerto Rico and the US Virgin Islands into the United States. These territories share their parent country’s label and shape. Baykonur is dissolved into Kazakhstan with no separate marker or internal boundary.
