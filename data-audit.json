@@ -1,0 +1,217 @@
+{
+  "countryCount": 197,
+  "years": {
+    "1999": {
+      "Self": 194,
+      "Target": 9730,
+      "Peer": 17982,
+      "hello": 3,
+      "Trailer": 9730,
+      "NA": 1170
+    },
+    "2000": {
+      "Self": 194,
+      "Target": 9840,
+      "Peer": 17762,
+      "hello": 3,
+      "Trailer": 9840,
+      "NA": 1170
+    },
+    "2001": {
+      "Self": 194,
+      "Target": 9866,
+      "Peer": 17710,
+      "hello": 3,
+      "Trailer": 9866,
+      "NA": 1170
+    },
+    "2002": {
+      "Self": 194,
+      "Target": 9816,
+      "Peer": 17810,
+      "hello": 3,
+      "Trailer": 9816,
+      "NA": 1170
+    },
+    "2003": {
+      "Self": 194,
+      "Target": 9832,
+      "Peer": 17778,
+      "hello": 3,
+      "Trailer": 9832,
+      "NA": 1170
+    },
+    "2004": {
+      "Self": 194,
+      "Target": 9879,
+      "Peer": 17684,
+      "hello": 3,
+      "Trailer": 9879,
+      "NA": 1170
+    },
+    "2005": {
+      "Self": 194,
+      "Target": 9884,
+      "Peer": 17674,
+      "hello": 3,
+      "Trailer": 9884,
+      "NA": 1170
+    },
+    "2006": {
+      "Self": 195,
+      "Target": 9977,
+      "Peer": 17876,
+      "hello": 2,
+      "Trailer": 9977,
+      "NA": 782
+    },
+    "2007": {
+      "Self": 195,
+      "Target": 10012,
+      "Peer": 17806,
+      "hello": 2,
+      "Trailer": 10012,
+      "NA": 782
+    },
+    "2008": {
+      "Self": 196,
+      "Target": 10034,
+      "Peer": 18152,
+      "Trailer": 10034,
+      "hello": 1,
+      "NA": 392
+    },
+    "2009": {
+      "Self": 196,
+      "Target": 9931,
+      "Peer": 18358,
+      "Trailer": 9931,
+      "hello": 1,
+      "NA": 392
+    },
+    "2010": {
+      "Self": 196,
+      "Target": 9917,
+      "Peer": 18386,
+      "Trailer": 9917,
+      "hello": 1,
+      "NA": 392
+    },
+    "2011": {
+      "Self": 197,
+      "Target": 10014,
+      "Peer": 18584,
+      "Trailer": 10014
+    },
+    "2012": {
+      "Self": 197,
+      "Target": 9996,
+      "Peer": 18620,
+      "Trailer": 9996
+    },
+    "2013": {
+      "Self": 197,
+      "Target": 9968,
+      "Peer": 18676,
+      "Trailer": 9968
+    },
+    "2014": {
+      "Self": 197,
+      "Target": 9944,
+      "Peer": 18724,
+      "Trailer": 9944
+    },
+    "2015": {
+      "Self": 197,
+      "Target": 9976,
+      "Peer": 18660,
+      "Trailer": 9976
+    },
+    "2016": {
+      "Self": 197,
+      "Target": 9961,
+      "Peer": 18690,
+      "Trailer": 9961
+    },
+    "2017": {
+      "Self": 197,
+      "Target": 9981,
+      "Peer": 18650,
+      "Trailer": 9981
+    },
+    "2018": {
+      "Self": 197,
+      "Target": 10028,
+      "Peer": 18556,
+      "Trailer": 10028
+    },
+    "2019": {
+      "Self": 197,
+      "Target": 10017,
+      "Peer": 18578,
+      "Trailer": 10017
+    },
+    "2020": {
+      "Self": 197,
+      "Target": 9947,
+      "Peer": 18718,
+      "Trailer": 9947
+    },
+    "2021": {
+      "Self": 197,
+      "Target": 9869,
+      "Peer": 18874,
+      "Trailer": 9869
+    },
+    "2022": {
+      "Self": 197,
+      "Target": 10079,
+      "Peer": 18454,
+      "Trailer": 10079
+    },
+    "2023": {
+      "Self": 197,
+      "Target": 9991,
+      "Peer": 18630,
+      "Trailer": 9991
+    }
+  },
+  "nameRepairs": {
+    "C√ôte d'Ivoire": "Côte d’Ivoire",
+    "S‚Äûo Tom√à and Pr√åncipe": "São Tomé and Príncipe",
+    "T¬∏rkiye": "Türkiye"
+  },
+  "geographyAliases": {
+    "Brunei Darussalam": "Brunei",
+    "Republic of Congo": "Republic of the Congo",
+    "Côte d’Ivoire": "Ivory Coast",
+    "Czech Republic": "Czechia",
+    "The Gambia": "Gambia",
+    "Islamic Republic of Iran": "Iran",
+    "Korea": "South Korea",
+    "Kyrgyz Republic": "Kyrgyzstan",
+    "Lao P.D.R.": "Laos",
+    "Micronesia": "Federated States of Micronesia",
+    "São Tomé and Príncipe": "São Tomé and Principe",
+    "Serbia": "Republic of Serbia",
+    "Slovak Republic": "Slovakia",
+    "St. Kitts and Nevis": "Saint Kitts and Nevis",
+    "St. Lucia": "Saint Lucia",
+    "St. Vincent and the Grenadines": "Saint Vincent and the Grenadines",
+    "Taiwan Province of China": "Taiwan",
+    "Tanzania": "United Republic of Tanzania",
+    "Timor-Leste": "East Timor",
+    "Türkiye": "Turkey",
+    "United States": "United States of America",
+    "West Bank and Gaza": "Palestine",
+    "Vatican City": "Vatican",
+    "Eswatini": "eSwatini"
+  },
+  "unmatchedCountries": [],
+  "orientation": "Reference country is the row; evaluated country is the column (confirmed by user)",
+  "specialValues": {
+    "NA": "No data",
+    "hello": "No data (28 unexpected values)",
+    "Self": "Reference country"
+  }
+}
