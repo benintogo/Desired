@@ -39,3 +39,5 @@ Greenland uses Denmark’s classification in every year, including Self when Den
 Somaliland follows Somalia and Baykonur Cosmodrome follows Kazakhstan in all years, including Self. These regions do not add to country counts.
 
 Map geometry merges Greenland into Denmark, New Caledonia into France, and Puerto Rico and the US Virgin Islands into the United States. These territories share their parent country’s label and shape. Baykonur is dissolved into Kazakhstan with no separate marker or internal boundary.
+
+Falkland Islands are merged into the United Kingdom, French Polynesia into France, and Faroe Islands into Denmark, sharing parent-country classifications and labels.
