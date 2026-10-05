@@ -41,3 +41,5 @@ Somaliland follows Somalia and Baykonur Cosmodrome follows Kazakhstan in all yea
 Map geometry merges Greenland into Denmark, New Caledonia into France, and Puerto Rico and the US Virgin Islands into the United States. These territories share their parent country’s label and shape. Baykonur is dissolved into Kazakhstan with no separate marker or internal boundary.
 
 Falkland Islands are merged into the United Kingdom, French Polynesia into France, and Faroe Islands into Denmark, sharing parent-country classifications and labels.
+
+Population chart: Data Entry!AB2:BA198 in WEO_Data-26.xlsx. Country names in AB, 1999–2023 populations in AC:BA. Red = Trailer, yellow = Self + Peer, green = Target. Percentages divide each category’s population by the sum of available population across the 197 matched countries for each year. Missing population is excluded; unavailable reference years are gaps. Territory geometry changes do not add population rows.

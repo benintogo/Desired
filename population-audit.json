@@ -1,0 +1,159 @@
+{
+  "source": "WEO_Data-26.xlsx",
+  "sheet": "Data Entry",
+  "countryColumn": "AB",
+  "populationColumns": "AC:BA",
+  "normalization": "Sum of numeric populations for 197 matched countries per year; missing populations excluded, not replaced with zero. No extra population added for merged map territories.",
+  "seriesOrder": [
+    "Trailer",
+    "Self + Peer",
+    "Target"
+  ],
+  "missingPopulation": [
+    [
+      "Kosovo",
+      1999
+    ],
+    [
+      "Montenegro",
+      1999
+    ],
+    [
+      "South Sudan",
+      1999
+    ],
+    [
+      "Kosovo",
+      2000
+    ],
+    [
+      "Montenegro",
+      2000
+    ],
+    [
+      "South Sudan",
+      2000
+    ],
+    [
+      "Kosovo",
+      2001
+    ],
+    [
+      "Montenegro",
+      2001
+    ],
+    [
+      "South Sudan",
+      2001
+    ],
+    [
+      "Kosovo",
+      2002
+    ],
+    [
+      "Montenegro",
+      2002
+    ],
+    [
+      "South Sudan",
+      2002
+    ],
+    [
+      "Kosovo",
+      2003
+    ],
+    [
+      "Montenegro",
+      2003
+    ],
+    [
+      "South Sudan",
+      2003
+    ],
+    [
+      "Kosovo",
+      2004
+    ],
+    [
+      "Montenegro",
+      2004
+    ],
+    [
+      "South Sudan",
+      2004
+    ],
+    [
+      "Kosovo",
+      2005
+    ],
+    [
+      "Montenegro",
+      2005
+    ],
+    [
+      "South Sudan",
+      2005
+    ],
+    [
+      "Kosovo",
+      2006
+    ],
+    [
+      "South Sudan",
+      2006
+    ],
+    [
+      "Kosovo",
+      2007
+    ],
+    [
+      "South Sudan",
+      2007
+    ],
+    [
+      "South Sudan",
+      2008
+    ],
+    [
+      "South Sudan",
+      2009
+    ],
+    [
+      "South Sudan",
+      2010
+    ]
+  ],
+  "countryNameRepairs": {
+    "CÙte d'Ivoire": "Côte d’Ivoire",
+    "S„o TomÈ and PrÌncipe": "São Tomé and Príncipe",
+    "T¸rkiye": "Türkiye"
+  },
+  "validatedCountryYears": 4897,
+  "totalsInWorkbookUnits": {
+    "1999": 5999.905631,
+    "2000": 6078.998875,
+    "2001": 6159.001968,
+    "2002": 6237.160392,
+    "2003": 6317.904688,
+    "2004": 6397.433699,
+    "2005": 6477.176898,
+    "2006": 6558.3036,
+    "2007": 6639.963896,
+    "2008": 6725.405994,
+    "2009": 6807.100095,
+    "2010": 6890.282694,
+    "2011": 6977.737596,
+    "2012": 7066.358204,
+    "2013": 7153.524301,
+    "2014": 7242.8974,
+    "2015": 7328.9489029999995,
+    "2016": 7418.349800999999,
+    "2017": 7506.130993,
+    "2018": 7586.033601,
+    "2019": 7666.696199,
+    "2020": 7744.9281009999995,
+    "2021": 7810.386648,
+    "2022": 7872.607969,
+    "2023": 7946.720806
+  }
+}
