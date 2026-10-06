@@ -45,3 +45,5 @@ Falkland Islands are merged into the United Kingdom, French Polynesia into Franc
 Population chart: Data Entry!AB2:BA198 in WEO_Data-26.xlsx. Country names in AB, 1999–2023 populations in AC:BA. Red = Trailer, yellow = Self + Peer, green = Target. Percentages divide each category’s population by the sum of available population across the 197 matched countries for each year. Missing population is excluded; unavailable reference years are gaps. Territory geometry changes do not add population rows.
 
 Trailer minus Target line chart: subtract the unrounded Target population share from Trailer share for each country-year. Units are percentage points, with a fixed -100 to +100 scale. Missing years remain gaps.
+
+The population-share difference is named Global Stature Index. Rankings tab has an independent 1999–2023 year selector, descending unrounded scores, competition ranks for exact ties, and unranked No Data entries.

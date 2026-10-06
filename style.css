@@ -5,3 +5,5 @@
 @media(max-width:650px){#population-chart{min-width:700px}#population-chart text{font-size:22px}}
 
 #balance-chart{display:block;width:100%;min-width:560px;cursor:crosshair}@media(max-width:650px){#balance-chart{min-width:700px}#balance-chart text{font-size:22px}}
+
+[hidden]{display:none!important}.view-tabs{display:flex;gap:8px;margin-bottom:24px;border-bottom:1px solid #cbd5e1;padding-bottom:12px}.view-tabs button[aria-selected=true]{background:#172b45;color:white;border-color:#172b45}.ranking-control{display:grid;gap:8px;max-width:160px;font-size:14px;font-weight:650;margin:20px 0}.ranking-table-wrap{overflow-x:auto}.ranking-table-wrap td:first-child{width:80px;color:#61758b}.ranking-table-wrap td:last-child,.ranking-table-wrap th:last-child{text-align:right;font-variant-numeric:tabular-nums}.ranking-table-wrap tbody tr:nth-child(even){background:#f7fafc}#ranking-summary{color:#61758b;font-size:14px}
