@@ -3,3 +3,5 @@
 .population-panel{margin-top:20px;padding:24px 28px;background:white;border:1px solid #d8e1eb;border-radius:16px}.population-panel h2{font-size:22px}.population-panel .legend{padding:16px 0}.population-scroll{overflow-x:auto}#population-chart{display:block;width:100%;min-width:560px;cursor:crosshair}.population-readout{font-size:16px;line-height:1.6;font-variant-numeric:tabular-nums;margin:10px 0}.population-note{font-size:14px;color:#61758b;line-height:1.5;margin:8px 0 20px}.population-panel summary{font-size:14px}@media(max-width:650px){.population-panel{padding:20px 16px}.population-panel h2{font-size:20px}}
 
 @media(max-width:650px){#population-chart{min-width:700px}#population-chart text{font-size:22px}}
+
+#balance-chart{display:block;width:100%;min-width:560px;cursor:crosshair}@media(max-width:650px){#balance-chart{min-width:700px}#balance-chart text{font-size:22px}}
