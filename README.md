@@ -8,7 +8,7 @@ The reference country is the CSV row; evaluated countries are the named columns.
 
 Target, Trailer, and Peer are retained as supplied. All 10,930 NA cells and 28 hello cells are encoded as missing data and displayed as **No Data**. The reference country is labeled Self and highlighted separately even if its own diagonal entry is missing. Original input CSVs were not changed. `data-audit.json` records counts by year and name mappings.
 
-Three corrupted display names were repaired: Côte d’Ivoire, São Tomé and Príncipe, and Türkiye. Korea maps to South Korea; North Korea has its own separate entry. All 197 country identifiers match geometry.
+Three corrupted display names were repaired: Côte d’Ivoire, São Tomé and Príncipe, and Türkiye. The source label Korea is displayed as South Korea; North Korea retains its own separate entry. All 197 country identifiers match geometry.
 
 ## Map and interaction
 
