@@ -47,3 +47,5 @@ Population chart: Data Entry!AB2:BA198 in WEO_Data-26.xlsx. Country names in AB,
 Trailer minus Target line chart: subtract the unrounded Target population share from Trailer share for each country-year. Units are percentage points, with a fixed -100 to +100 scale. Missing years remain gaps.
 
 The population-share difference is named Global Stature Index. Rankings tab has an independent 1999–2023 year selector, descending unrounded scores, competition ranks for exact ties, and unranked No Data entries.
+
+Global Power Index rankings use the cached numeric values in WEO_Data-26.xlsx, Data Entry!BC2:CA198 (1999–2023). Names are matched to the country list. Values are displayed divided by 10^12; sorting and ties use unscaled stored values. Missing cells remain unranked.
