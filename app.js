@@ -4,7 +4,7 @@ const $=id=>document.getElementById(id), data=window.MAP_DATA, geo=window.MAP_GE
 if(!data||!geo){$('map-title').textContent='Map could not load';$('status').textContent='Please reload the page. Some map files could not be loaded.';return;}
 const labels={T:'Target',L:'Trailer',P:'Peer',S:'Self',N:'No Data'};
 const colors={T:'#22964f',L:'#dc3545',P:'#f2cd32',S:'#8b929a',N:'#000000'};
-let reference=data.countries.indexOf('United States'),year=1999,timer=null,activeShape=null;
+let reference=data.countries.indexOf('United States'),year=2023,timer=null,activeShape=null;
 const ns='http://www.w3.org/2000/svg', map=$('map');
 function svg(tag,attrs){const el=document.createElementNS(ns,tag);for(const [k,v]of Object.entries(attrs))el.setAttribute(k,v);return el;}
 map.append(svg('path',{d:geo.sphere,class:'ocean'}),svg('path',{d:geo.grid,class:'grid'}));
