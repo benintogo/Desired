@@ -3,3 +3,5 @@
 #land-map{height:420px;max-height:none;isolation:isolate}#land-map img{max-width:none}#land-map .leaflet-control-attribution{font-size:11px}#land-map .leaflet-control a{color:#2864b0}
 
 #land-map{height:520px;width:100%}@media(max-width:750px){#land-map{height:380px}}
+
+.land-play:has(#land-results:not([hidden])){grid-template-columns:minmax(240px,1fr) minmax(0,2fr);align-items:start}.land-map-panel{grid-column:1/-1}.land-results-grid{border-top:0;padding-top:0;gap:20px;grid-template-columns:minmax(0,1fr) minmax(0,1fr)}.land-result-row{font-size:13px}.land-result-row small{white-space:normal}#land-results{min-width:0}@media(max-width:950px){.land-play:has(#land-results:not([hidden])){grid-template-columns:1fr}}@media(max-width:600px){.land-results-grid{grid-template-columns:1fr}}
