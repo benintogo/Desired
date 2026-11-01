@@ -15,11 +15,11 @@ function render(){
  const pad=(hi-lo||Math.abs(hi)||1)*0.05;
  const min=mode==='rank'?Math.max(1,Math.floor(lo-pad)):Math.max(0,lo-pad);
  const max=mode==='rank'?Math.max(min+1,Math.ceil(hi+pad)):Math.max(min+Number.EPSILON,hi+pad);
- const x=j=>L+j/24*(W-L-R),y=v=>mode==='rank'?T+(v-min)/(max-min)*(H-T-B):H-B-(v-min)/(max-min)*(H-T-B);
- chart.setAttribute('aria-label',`Global Power Index ${mode==='rank'?'rankings, rank 1 at the top':'shares of the annual total in percent'}, 1999–2023. ${[...selected.keys()].map(i=>countries[i]).join(', ')}. Exact values in the table below.`);
+ const x=j=>L+j/(data.years.length-1)*(W-L-R),y=v=>mode==='rank'?T+(v-min)/(max-min)*(H-T-B):H-B-(v-min)/(max-min)*(H-T-B);
+ chart.setAttribute('aria-label',`Global Power Index ${mode==='rank'?'rankings, rank 1 at the top':'shares of the annual total in percent'}, ${data.years[0]}–${data.years.at(-1)}. ${[...selected.keys()].map(i=>countries[i]).join(', ')}. Exact values in the table below.`);
  chart.append(svg('text',{x:L,y:18,fill:'#53667b','font-size':14},mode==='rank'?'Rank · 1 is highest':'Global Power Index · % of annual total'));
  for(let k=0;k<=4;k++){const v=mode==='rank'?Math.round(min+k*(max-min)/4):min+k*(max-min)/4;chart.append(svg('line',{x1:L,x2:W-R,y1:y(v),y2:y(v),stroke:'#e0e7ef'}),svg('text',{x:L-10,y:y(v)+5,'text-anchor':'end',fill:'#53667b','font-size':13},v.toLocaleString('en-US',{maximumSignificantDigits:2})+(mode==='rank'?'':'%')));}
- [0,4,8,12,16,20,24].forEach(j=>chart.append(svg('text',{x:x(j),y:H-15,'text-anchor':'middle',fill:'#53667b','font-size':14},data.years[j])));
+ [0,4,8,12,16,20,data.years.length-1].forEach(j=>chart.append(svg('text',{x:x(j),y:H-15,'text-anchor':'middle',fill:'#53667b','font-size':14},data.years[j])));
  const legend=$('power-history-legend');legend.replaceChildren();
  for(const [i,color] of selected){const vals=values(i);let path='',open=false;vals.forEach((v,j)=>{if(v===null){open=false;return;}path+=`${open?'L':'M'}${x(j)},${y(v)} `;open=true;});chart.append(svg('path',{d:path,fill:'none',stroke:color,'stroke-width':2.5}));vals.forEach((v,j)=>{if(v===null)return;const dot=svg('circle',{cx:x(j),cy:y(v),r:4,fill:color,tabindex:0});const label=`${countries[i]} · ${data.years[j]} · ${mode==='rank'?'Rank '+v:format(v)+'%'}`;dot.append(svg('title',{},label));dot.setAttribute('aria-label',label);dot.addEventListener('mouseenter',()=>$('power-history-readout').textContent=label);dot.addEventListener('focus',()=>$('power-history-readout').textContent=label);dot.addEventListener('click',()=>$('power-history-readout').textContent=label);chart.append(dot);});const item=document.createElement('span');item.className='legend-item';const swatch=document.createElement('i');swatch.className='swatch';swatch.style.setProperty('--color',color);item.append(swatch,document.createTextNode(countries[i]));legend.append(item);}
  $('power-history-readout').textContent='';
