@@ -16,5 +16,5 @@ window.LAND_DAILY={
   const seen=new Set();return pool.filter(p=>{if(seen.has(p.area))return false;seen.add(p.area);return true;}).slice(0,count);
  },
  result(order){const correct=[...order].sort((a,b)=>b.area-a.area);return correct.slice(0,-1).map((p,i)=>order.indexOf(p)<order.indexOf(correct[i+1]));},
- share(day,order){const wins=this.result(order);return `Land Area Daily · ${day}\n${wins.filter(Boolean).length}/${wins.length} · Level ${this.level(day)}\n${wins.map(v=>v?'🟩':'⬛').join('')}\nhttps://benintogo.github.io/Desired/?game=daily`;}
+ share(day,order){const wins=this.result(order),correct=[...order].sort((a,b)=>b.area-a.area);const squares=order.map((p,i)=>p===correct[i]?'🟩':'🟥').join('');return `${wins.filter(Boolean).length}/${wins.length} points\nLand Area Daily · ${day} · Level ${this.level(day)}\n${squares}\nhttps://benintogo.github.io/Desired/?game=daily`;}
 };
