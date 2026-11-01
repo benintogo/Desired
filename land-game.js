@@ -9,13 +9,13 @@ function treemap(items,x,y,w,h){if(items.length===1){const p=items[0],idx=correc
 function showResult(){
  $('land-check').disabled=true;render();$('land-results').hidden=false;$('land-tree').replaceChildren();treemap(correct,0,0,600,400);$('land-key').replaceChildren();correct.forEach((p,i)=>{const row=document.createElement('div');row.style.color=colors[i];row.textContent=`${i+1}. ${p.name} · ${fmt(p.area)} km²`;$('land-key').append(row);});animate();
 }
-function storageKey(){return 'land-daily-v1:'+dailyDay;}
+function storageKey(){return 'land-daily-cycle-v1:'+dailyDay;}
 function saveDaily(){if(mode!=='daily')return;try{localStorage.setItem(storageKey(),JSON.stringify({order:order.map(p=>p.rank),locked}));}catch{$('land-save-notice').hidden=false;$('land-save-notice').textContent='Browser storage is unavailable. Your daily result will not be saved after you leave.';}}
 function loadDaily(){
  clearTimeout(replayTimer);round++;dailyDay=daily.day();order=daily.puzzle(D,dailyDay);const ids=order.map(p=>p.rank);locked=false;
- try{const saved=JSON.parse(localStorage.getItem(storageKey()));if(saved&&Array.isArray(saved.order)&&saved.order.length===4&&new Set(saved.order).size===4&&saved.order.every(id=>ids.includes(id))){order=saved.order.map(id=>D.find(p=>p.rank===id));locked=saved.locked===true;}}catch{}
+ try{const saved=JSON.parse(localStorage.getItem(storageKey()));if(saved&&Array.isArray(saved.order)&&saved.order.length===ids.length&&new Set(saved.order).size===ids.length&&saved.order.every(id=>ids.includes(id))){order=saved.order.map(id=>D.find(p=>p.rank===id));locked=saved.locked===true;}}catch{}
  correct=[...order].sort((a,b)=>b.area-a.area);dailyScore=daily.result(order).filter(Boolean).length;
- $('land-daily-date').textContent=dailyDay+' · Level 8';$('land-rule').textContent='4 places · within 50 ranks';$('land-score').textContent=locked?`${dailyScore} / 3 points · Daily complete`:'';
+ $('land-daily-date').textContent=dailyDay+' · Level '+daily.level(dailyDay);$('land-rule').textContent=order.length+' places'+(Number.isFinite(daily.rules(dailyDay).span)?' · within '+daily.rules(dailyDay).span+' ranks':' · all ranks');$('land-score').textContent=locked?`${dailyScore} / ${order.length-1} points · Daily complete`:'';
  $('land-check').disabled=locked;$('land-results').hidden=!locked;$('land-share-panel').hidden=!locked;$('land-share-status').textContent='';$('land-share-text').hidden=true;render();if(locked)showResult();updateReset();
 }
 function updateReset(){const next=new Date(daily.day()+'T00:00:00Z').getTime()+86400000;const minutes=Math.max(0,Math.ceil((next-Date.now())/60000));$('land-daily-reset').textContent=`Next round in ${Math.floor(minutes/60)}h ${minutes%60}m · midnight UTC`;}
@@ -32,7 +32,7 @@ $('land-check').onclick=()=>{
  if(mode==='daily'&&daily.day()!==dailyDay){loadDaily();return;}
  if(mode==='daily'){try{const saved=JSON.parse(localStorage.getItem(storageKey()));if(saved?.locked){loadDaily();return;}}catch{}}
  if(locked)return;locked=true;const score=daily.result(order).filter(Boolean).length;
- if(mode==='daily'){dailyScore=score;saveDaily();$('land-score').textContent=`${score} / 3 points · Daily complete`;$('land-share-panel').hidden=false;}else{total+=score;possible+=order.length-1;$('land-score').textContent=`${score} / ${order.length-1} points`;$('land-total').textContent=`Total: ${total} / ${possible}`;}
+ if(mode==='daily'){dailyScore=score;saveDaily();$('land-score').textContent=`${score} / ${order.length-1} points · Daily complete`;$('land-share-panel').hidden=false;}else{total+=score;possible+=order.length-1;$('land-score').textContent=`${score} / ${order.length-1} points`;$('land-total').textContent=`Total: ${total} / ${possible}`;}
  showResult();
 };
 $('land-share').onclick=async()=>{
