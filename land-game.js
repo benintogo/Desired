@@ -15,7 +15,7 @@ function loadDaily(){
  clearTimeout(replayTimer);round++;dailyDay=daily.day();order=daily.puzzle(D,dailyDay);const ids=order.map(p=>p.rank);locked=false;
  try{const saved=JSON.parse(localStorage.getItem(storageKey()));if(saved&&Array.isArray(saved.order)&&saved.order.length===ids.length&&new Set(saved.order).size===ids.length&&saved.order.every(id=>ids.includes(id))){order=saved.order.map(id=>D.find(p=>p.rank===id));locked=saved.locked===true;}}catch{}
  correct=[...order].sort((a,b)=>b.area-a.area);dailyScore=daily.result(order).filter(Boolean).length;
- $('land-daily-date').textContent=dailyDay+' · Level '+daily.level(dailyDay);$('land-rule').textContent=order.length+' places'+(Number.isFinite(daily.rules(dailyDay).span)?' · within '+daily.rules(dailyDay).span+' ranks':' · all ranks');$('land-score').textContent=locked?`${dailyScore} / ${order.length-1} points · Daily complete`:'';
+ $('land-daily-date').textContent='Day #'+daily.dayNumber(dailyDay)+' · Level '+daily.level(dailyDay);$('land-rule').textContent=order.length+' places'+(Number.isFinite(daily.rules(dailyDay).span)?' · within '+daily.rules(dailyDay).span+' ranks':' · all ranks');$('land-score').textContent=locked?`${dailyScore} / ${order.length-1} points · Daily complete`:'';
  $('land-check').disabled=locked;$('land-results').hidden=!locked;$('land-share-panel').hidden=!locked;$('land-share-status').textContent='';$('land-share-text').hidden=true;render();if(locked)showResult();updateReset();
 }
 function updateReset(){const next=new Date(daily.day()+'T00:00:00Z').getTime()+86400000;const minutes=Math.max(0,Math.ceil((next-Date.now())/60000));$('land-daily-reset').textContent=`Next round in ${Math.floor(minutes/60)}h ${minutes%60}m · midnight UTC`;}

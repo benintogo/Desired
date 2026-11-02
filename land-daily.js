@@ -1,6 +1,8 @@
 'use strict';
 window.LAND_DAILY={
  day:()=>new Date().toISOString().slice(0,10),
+ dayNumber(day){return Math.floor((Date.parse(day+'T00:00:00Z')-Date.UTC(2026,10,1))/86400000)+1;},
+ bold(text){return text.replace(/[A-Za-z0-9]/g,c=>String.fromCodePoint(c>='0'&&c<='9'?0x1D7EC+c.charCodeAt(0)-48:c>='a'&&c<='z'?0x1D5EE+c.charCodeAt(0)-97:0x1D5D4+c.charCodeAt(0)-65));},
  level(day){const days=Math.floor((Date.parse(day+'T00:00:00Z')-Date.UTC(2026,10,1))/86400000);return ((days%9)+9)%9+1;},
  rules(day){const level=this.level(day);return {level,count:3+(level-1)%3,span:level>=7?50:level>=4?150:Infinity};},
  puzzle(data,day){
@@ -16,5 +18,5 @@ window.LAND_DAILY={
   const seen=new Set();return pool.filter(p=>{if(seen.has(p.area))return false;seen.add(p.area);return true;}).slice(0,count);
  },
  result(order){const correct=[...order].sort((a,b)=>b.area-a.area);return correct.slice(0,-1).map((p,i)=>order.indexOf(p)<order.indexOf(correct[i+1]));},
- share(day,order){const wins=this.result(order),correct=[...order].sort((a,b)=>b.area-a.area),score=wins.filter(Boolean).length;const squares=order.map((p,i)=>p===correct[i]?'🟩':'🟥').join('');return `${score} ${score===1?'point':'points'}\nLand Area Daily · ${day} · Level ${this.level(day)}\n${squares}\nhttps://benintogo.github.io/Desired/?game=daily`;}
+ share(day,order){const wins=this.result(order),correct=[...order].sort((a,b)=>b.area-a.area),score=wins.filter(Boolean).length;const squares=order.map((p,i)=>p===correct[i]?'🟩':'🟥').join('');return `${this.bold(score+' '+(score===1?'point':'points'))}\nLandle · Day #${this.dayNumber(day)}\n${squares}\nhttps://benintogo.github.io/Desired/?game=daily`;}
 };
