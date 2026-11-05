@@ -1,190 +1,332 @@
 {
-  "countryCount": 197,
+  "source": "WEO_Data-26.xlsx",
+  "sheet": "Data Entry",
+  "gdpColumns": "B:AB",
+  "populationColumns": "AD:BD",
+  "gpiColumns": "BF:CF",
+  "orientation": "Reference country is the row; evaluated country is the column",
+  "formula": "100 * (Trailer population - Target population) / annual population total",
+  "normalization": "Sum of all available country populations in the source for each year, including populations of countries without GPI; no extra territory population added.",
+  "seriesOrder": [
+    "Trailer",
+    "Self + Peer",
+    "Target"
+  ],
   "years": {
     "1999": {
-      "Self": 194,
-      "Target": 9730,
-      "Peer": 17982,
-      "hello": 3,
-      "Trailer": 9730,
-      "NA": 1170
+      "rankedCountries": 193,
+      "populationTotal": 6084881835.0,
+      "unclassifiedPopulation": 834697.0,
+      "classifications": {
+        "S": 193,
+        "T": 9804,
+        "P": 17448,
+        "N": 1560,
+        "L": 9804
+      }
     },
     "2000": {
-      "Self": 194,
-      "Target": 9840,
-      "Peer": 17762,
-      "hello": 3,
-      "Trailer": 9840,
-      "NA": 1170
+      "rankedCountries": 193,
+      "populationTotal": 6167508954.0,
+      "unclassifiedPopulation": 745088.0,
+      "classifications": {
+        "S": 193,
+        "T": 9884,
+        "P": 17288,
+        "N": 1560,
+        "L": 9884
+      }
     },
     "2001": {
-      "Self": 194,
-      "Target": 9866,
-      "Peer": 17710,
-      "hello": 3,
-      "Trailer": 9866,
-      "NA": 1170
+      "rankedCountries": 193,
+      "populationTotal": 6250680457.0,
+      "unclassifiedPopulation": 812249.0,
+      "classifications": {
+        "S": 193,
+        "T": 9885,
+        "P": 17286,
+        "N": 1560,
+        "L": 9885
+      }
     },
     "2002": {
-      "Self": 194,
-      "Target": 9816,
-      "Peer": 17810,
-      "hello": 3,
-      "Trailer": 9816,
-      "NA": 1170
+      "rankedCountries": 194,
+      "populationTotal": 6333415605.0,
+      "unclassifiedPopulation": 0.0,
+      "classifications": {
+        "S": 194,
+        "T": 9949,
+        "P": 17544,
+        "N": 1173,
+        "L": 9949
+      }
     },
     "2003": {
-      "Self": 194,
-      "Target": 9832,
-      "Peer": 17778,
-      "hello": 3,
-      "Trailer": 9832,
-      "NA": 1170
+      "rankedCountries": 194,
+      "populationTotal": 6415988750.0,
+      "unclassifiedPopulation": 0.0,
+      "classifications": {
+        "S": 194,
+        "T": 9945,
+        "P": 17552,
+        "N": 1173,
+        "L": 9945
+      }
     },
     "2004": {
-      "Self": 194,
-      "Target": 9879,
-      "Peer": 17684,
-      "hello": 3,
-      "Trailer": 9879,
-      "NA": 1170
+      "rankedCountries": 194,
+      "populationTotal": 6498944793.0,
+      "unclassifiedPopulation": 0.0,
+      "classifications": {
+        "S": 194,
+        "T": 10018,
+        "P": 17406,
+        "N": 1173,
+        "L": 10018
+      }
     },
     "2005": {
-      "Self": 194,
-      "Target": 9884,
-      "Peer": 17674,
-      "hello": 3,
-      "Trailer": 9884,
-      "NA": 1170
+      "rankedCountries": 194,
+      "populationTotal": 6582481474.0,
+      "unclassifiedPopulation": 0.0,
+      "classifications": {
+        "S": 194,
+        "T": 9992,
+        "P": 17458,
+        "N": 1173,
+        "L": 9992
+      }
     },
     "2006": {
-      "Self": 195,
-      "Target": 9977,
-      "Peer": 17876,
-      "hello": 2,
-      "Trailer": 9977,
-      "NA": 782
+      "rankedCountries": 195,
+      "populationTotal": 6666907694.0,
+      "unclassifiedPopulation": 0.0,
+      "classifications": {
+        "S": 195,
+        "T": 10104,
+        "P": 17622,
+        "N": 784,
+        "L": 10104
+      }
     },
     "2007": {
-      "Self": 195,
-      "Target": 10012,
-      "Peer": 17806,
-      "hello": 2,
-      "Trailer": 10012,
-      "NA": 782
+      "rankedCountries": 195,
+      "populationTotal": 6752710234.0,
+      "unclassifiedPopulation": 0.0,
+      "classifications": {
+        "S": 195,
+        "T": 10157,
+        "P": 17516,
+        "N": 784,
+        "L": 10157
+      }
     },
     "2008": {
-      "Self": 196,
-      "Target": 10034,
-      "Peer": 18152,
-      "Trailer": 10034,
-      "hello": 1,
-      "NA": 392
+      "rankedCountries": 196,
+      "populationTotal": 6839814800.0,
+      "unclassifiedPopulation": 0.0,
+      "classifications": {
+        "S": 196,
+        "T": 10190,
+        "P": 17840,
+        "N": 393,
+        "L": 10190
+      }
     },
     "2009": {
-      "Self": 196,
-      "Target": 9931,
-      "Peer": 18358,
-      "Trailer": 9931,
-      "hello": 1,
-      "NA": 392
+      "rankedCountries": 196,
+      "populationTotal": 6928092117.0,
+      "unclassifiedPopulation": 0.0,
+      "classifications": {
+        "S": 196,
+        "T": 10022,
+        "P": 18176,
+        "L": 10022,
+        "N": 393
+      }
     },
     "2010": {
-      "Self": 196,
-      "Target": 9917,
-      "Peer": 18386,
-      "Trailer": 9917,
-      "hello": 1,
-      "NA": 392
+      "rankedCountries": 196,
+      "populationTotal": 7017031672.0,
+      "unclassifiedPopulation": 0.0,
+      "classifications": {
+        "S": 196,
+        "T": 10016,
+        "P": 18188,
+        "L": 10016,
+        "N": 393
+      }
     },
     "2011": {
-      "Self": 197,
-      "Target": 10014,
-      "Peer": 18584,
-      "Trailer": 10014
+      "rankedCountries": 197,
+      "populationTotal": 7106174479.0,
+      "unclassifiedPopulation": 0.0,
+      "classifications": {
+        "S": 197,
+        "T": 10089,
+        "P": 18434,
+        "L": 10089
+      }
     },
     "2012": {
-      "Self": 197,
-      "Target": 9996,
-      "Peer": 18620,
-      "Trailer": 9996
+      "rankedCountries": 197,
+      "populationTotal": 7196383661.0,
+      "unclassifiedPopulation": 0.0,
+      "classifications": {
+        "S": 197,
+        "T": 10049,
+        "P": 18514,
+        "L": 10049
+      }
     },
     "2013": {
-      "Self": 197,
-      "Target": 9968,
-      "Peer": 18676,
-      "Trailer": 9968
+      "rankedCountries": 197,
+      "populationTotal": 7286890378.0,
+      "unclassifiedPopulation": 0.0,
+      "classifications": {
+        "S": 197,
+        "T": 10042,
+        "P": 18528,
+        "L": 10042
+      }
     },
     "2014": {
-      "Self": 197,
-      "Target": 9944,
-      "Peer": 18724,
-      "Trailer": 9944
+      "rankedCountries": 197,
+      "populationTotal": 7376614072.0,
+      "unclassifiedPopulation": 0.0,
+      "classifications": {
+        "S": 197,
+        "T": 10029,
+        "P": 18554,
+        "L": 10029
+      }
     },
     "2015": {
-      "Self": 197,
-      "Target": 9976,
-      "Peer": 18660,
-      "Trailer": 9976
+      "rankedCountries": 197,
+      "populationTotal": 7465394899.0,
+      "unclassifiedPopulation": 0.0,
+      "classifications": {
+        "S": 197,
+        "T": 10052,
+        "P": 18508,
+        "L": 10052
+      }
     },
     "2016": {
-      "Self": 197,
-      "Target": 9961,
-      "Peer": 18690,
-      "Trailer": 9961
+      "rankedCountries": 197,
+      "populationTotal": 7553366775.0,
+      "unclassifiedPopulation": 0.0,
+      "classifications": {
+        "S": 197,
+        "T": 10032,
+        "P": 18548,
+        "L": 10032
+      }
     },
     "2017": {
-      "Self": 197,
-      "Target": 9981,
-      "Peer": 18650,
-      "Trailer": 9981
+      "rankedCountries": 197,
+      "populationTotal": 7640329578.0,
+      "unclassifiedPopulation": 0.0,
+      "classifications": {
+        "S": 197,
+        "T": 10011,
+        "P": 18590,
+        "L": 10011
+      }
     },
     "2018": {
-      "Self": 197,
-      "Target": 10028,
-      "Peer": 18556,
-      "Trailer": 10028
+      "rankedCountries": 197,
+      "populationTotal": 7724515707.0,
+      "unclassifiedPopulation": 0.0,
+      "classifications": {
+        "S": 197,
+        "T": 10068,
+        "P": 18476,
+        "L": 10068
+      }
     },
     "2019": {
-      "Self": 197,
-      "Target": 10017,
-      "Peer": 18578,
-      "Trailer": 10017
+      "rankedCountries": 197,
+      "populationTotal": 7805842326.0,
+      "unclassifiedPopulation": 0.0,
+      "classifications": {
+        "S": 197,
+        "T": 10047,
+        "P": 18518,
+        "L": 10047
+      }
     },
     "2020": {
-      "Self": 197,
-      "Target": 9947,
-      "Peer": 18718,
-      "Trailer": 9947
+      "rankedCountries": 197,
+      "populationTotal": 7881491005.0,
+      "unclassifiedPopulation": 0.0,
+      "classifications": {
+        "S": 197,
+        "T": 9980,
+        "P": 18652,
+        "L": 9980
+      }
     },
     "2021": {
-      "Self": 197,
-      "Target": 9869,
-      "Peer": 18874,
-      "Trailer": 9869
+      "rankedCountries": 197,
+      "populationTotal": 7948853285.0,
+      "unclassifiedPopulation": 0.0,
+      "classifications": {
+        "S": 197,
+        "T": 10140,
+        "P": 18332,
+        "L": 10140
+      }
     },
     "2022": {
-      "Self": 197,
-      "Target": 10079,
-      "Peer": 18454,
-      "Trailer": 10079
+      "rankedCountries": 197,
+      "populationTotal": 8015715579.0,
+      "unclassifiedPopulation": 0.0,
+      "classifications": {
+        "S": 197,
+        "T": 10178,
+        "P": 18256,
+        "L": 10178
+      }
     },
     "2023": {
-      "Self": 197,
-      "Target": 9991,
-      "Peer": 18630,
-      "Trailer": 9991
+      "rankedCountries": 197,
+      "populationTotal": 8085958398.0,
+      "unclassifiedPopulation": 0.0,
+      "classifications": {
+        "S": 197,
+        "T": 10141,
+        "P": 18330,
+        "L": 10141
+      }
+    },
+    "2024": {
+      "rankedCountries": 197,
+      "populationTotal": 8156135809.0,
+      "unclassifiedPopulation": 0.0,
+      "classifications": {
+        "S": 197,
+        "T": 10169,
+        "P": 18274,
+        "L": 10169
+      }
+    },
+    "2025": {
+      "rankedCountries": 197,
+      "populationTotal": 8225723619.0,
+      "unclassifiedPopulation": 0.0,
+      "classifications": {
+        "S": 197,
+        "T": 10146,
+        "P": 18320,
+        "L": 10146
+      }
     }
-  },
-  "nameRepairs": {
-    "C√ôte d'Ivoire": "Côte d’Ivoire",
-    "S‚Äûo Tom√à and Pr√åncipe": "São Tomé and Príncipe",
-    "T¬∏rkiye": "Türkiye"
   },
   "geographyAliases": {
     "Brunei Darussalam": "Brunei",
     "Republic of Congo": "Republic of the Congo",
-    "Côte d’Ivoire": "Ivory Coast",
+    "C\u00f4te d\u2019Ivoire": "Ivory Coast",
     "Czech Republic": "Czechia",
     "The Gambia": "Gambia",
     "Islamic Republic of Iran": "Iran",
@@ -192,7 +334,7 @@
     "Kyrgyz Republic": "Kyrgyzstan",
     "Lao P.D.R.": "Laos",
     "Micronesia": "Federated States of Micronesia",
-    "São Tomé and Príncipe": "São Tomé and Principe",
+    "S\u00e3o Tom\u00e9 and Pr\u00edncipe": "S\u00e3o Tom\u00e9 and Principe",
     "Serbia": "Republic of Serbia",
     "Slovak Republic": "Slovakia",
     "St. Kitts and Nevis": "Saint Kitts and Nevis",
@@ -201,17 +343,10 @@
     "Taiwan/China": "Taiwan",
     "Tanzania": "United Republic of Tanzania",
     "Timor-Leste": "East Timor",
-    "Türkiye": "Turkey",
+    "T\u00fcrkiye": "Turkey",
     "United States": "United States of America",
     "West Bank and Gaza": "Palestine",
     "Vatican City": "Vatican",
     "Eswatini": "eSwatini"
-  },
-  "unmatchedCountries": [],
-  "orientation": "Reference country is the row; evaluated country is the column (confirmed by user)",
-  "specialValues": {
-    "NA": "No data",
-    "hello": "No data (28 unexpected values)",
-    "Self": "Reference country"
   }
 }
