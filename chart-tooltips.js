@@ -35,6 +35,7 @@
   });
   chart.addEventListener('focusout',hide);
  }
+ document.addEventListener('chart-range-change',hide);
  document.addEventListener('keydown',e=>{if(e.key==='Escape')hide();});
  document.addEventListener('click',hide);
  window.addEventListener('scroll',hide,true);
