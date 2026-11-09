@@ -7,17 +7,16 @@ const ranks=data.years.map((_,y)=>{const result=Array(countries.length).fill(nul
 function add(i){selected.set(i,nextColor<palette.length?palette[nextColor]:`hsl(${nextColor*137.508%360} 65% 40%)`);nextColor++;}
 ['United States','China'].forEach(n=>{const i=countries.indexOf(n);if(i>=0)add(i);});
 function svg(tag,attrs,text){const el=document.createElementNS('http://www.w3.org/2000/svg',tag);Object.entries(attrs).forEach(([k,v])=>el.setAttribute(k,v));if(text!==undefined)el.textContent=text;return el;}
-const format=v=>v.toLocaleString('en-US',{maximumFractionDigits:3});
+const format=v=>v.toLocaleString('en-US',{maximumSignificantDigits:5});
 const range=ChartRange.create($('stature-history-chart'),data.years,render);
 function render(){
  const chart=$('stature-history-chart');chart.replaceChildren();const W=1000,H=360,L=100,R=25,T=35,B=45;
  const values=i=>data.years.map((_,y)=>mode==='rank'?ranks[y][i]:data.series[i][y]===null?null:data.series[i][y]);
- const all=[...selected.keys()].flatMap(i=>values(i).filter((v,j)=>range.contains(data.years[j]))).filter(v=>v!==null);const max=mode==='rank'?Math.max(5,Math.ceil(Math.max(1,...all)/5)*5):Math.max(1,...all)*1.05;
- const min=mode==='rank'?1:Math.min(0,...all)*1.05;
- const x=j=>L+range.fraction(data.years[j])*(W-L-R),y=v=>mode==='rank'?T+(v-1)/(max-1)*(H-T-B):H-B-(v-min)/(max-min)*(H-T-B);
+ const all=[...selected.keys()].flatMap(i=>values(i).filter((v,j)=>range.contains(data.years[j]))).filter(v=>v!==null);const scale=ChartScale(all,{rank:mode==='rank',floor:mode==='rank'?1:-Infinity,ceiling:mode==='rank'?countries.length:Infinity});const {min,max}=scale;
+ const x=j=>L+range.fraction(data.years[j])*(W-L-R),y=v=>mode==='rank'?T+(v-min)/(max-min)*(H-T-B):H-B-(v-min)/(max-min)*(H-T-B);
  chart.setAttribute('aria-label',`Global Stature Index ${mode==='rank'?'rankings, rank 1 at the top':'values in percentage points'}, ${range.start}–${range.end}. ${[...selected.keys()].map(i=>countries[i]).join(', ')}. Exact values in the table below.`);
  chart.append(svg('text',{x:L,y:18,fill:'#53667b','font-size':14},mode==='rank'?'Rank · 1 is highest':'Global Stature Index · percentage points'));
- for(let k=0;k<=4;k++){const v=mode==='rank'?Math.round(1+k*(max-1)/4):min+k*(max-min)/4;chart.append(svg('line',{x1:L,x2:W-R,y1:y(v),y2:y(v),stroke:'#e0e7ef'}),svg('text',{x:L-10,y:y(v)+5,'text-anchor':'end',fill:'#53667b','font-size':13},v.toLocaleString('en-US',{maximumSignificantDigits:2})+(mode==='rank'?'':' pp')));}
+ for(const v of scale.ticks){chart.append(svg('line',{x1:L,x2:W-R,y1:y(v),y2:y(v),stroke:'#e0e7ef'}),svg('text',{x:L-10,y:y(v)+5,'text-anchor':'end',fill:'#53667b','font-size':13},scale.format(v)+(mode==='rank'?'':' pp')));}
  range.ticks().map(year=>data.years.indexOf(year)).forEach(j=>chart.append(svg('text',{x:x(j),y:H-15,'text-anchor':'middle',fill:'#53667b','font-size':14},data.years[j])));
  const legend=$('stature-history-legend');legend.replaceChildren();
  for(const [i,color] of selected){const vals=values(i);let path='',open=false;vals.forEach((v,j)=>{if(v===null||!range.contains(data.years[j])){open=false;return;}path+=`${open?'L':'M'}${x(j)},${y(v)} `;open=true;});chart.append(svg('path',{d:path,fill:'none',stroke:color,'stroke-width':2.5}));vals.forEach((v,j)=>{if(v===null||!range.contains(data.years[j]))return;const dot=svg('circle',{cx:x(j),cy:y(v),r:4,fill:color,tabindex:0});const label=`${countries[i]} · ${data.years[j]} · ${mode==='rank'?'Rank '+v:format(v)+' pp'}`;dot.append(svg('title',{},label));dot.setAttribute('aria-label',label);dot.addEventListener('mouseenter',()=>$('stature-history-readout').textContent=label);dot.addEventListener('focus',()=>$('stature-history-readout').textContent=label);dot.addEventListener('click',()=>$('stature-history-readout').textContent=label);chart.append(dot);});const item=document.createElement('button');item.type='button';item.className='legend-item';item.setAttribute('aria-label','Remove '+countries[i]);item.addEventListener('click',()=>{selected.delete(i);render();});const swatch=document.createElement('i');swatch.className='swatch';swatch.style.setProperty('--color',color);item.append(swatch,document.createTextNode(countries[i]+' ×'));legend.append(item);}
